@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background:	#3a4664;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+#chitkara_logo{
+    width: 50px;
+    height: 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+.logo #head{
+    text-align: center;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#Learn_more{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: #1fa1b2;
+    transition: all 0.3s ease;
+}
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-content button {
+    padding: 0.5rem 1rem;
+    background: #34A853;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+.about-section {
+    background:#eaa0a2;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.events-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.event-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.event-card{
+    background: #EA4335;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 0.5s ease forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+.event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section {
+    background: rgb(160, 149, 62);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#Send{
+    padding: 0.5rem 1rem;
+    background-color: aqua;
+    color: brown;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    align-items: center;
+    align-content: center;
+}
+
+form button{
+    padding: 0.5rem 1rem;
+    background: white;
+    color:#34A853;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: 	#aaaaaa;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .home-image {
+        margin-top: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important;
+    }
+}
